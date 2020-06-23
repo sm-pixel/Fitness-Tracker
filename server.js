@@ -1,10 +1,12 @@
 const express = require("express");
 const mongojs = require("mongojs");
-const logger = require("morgan");
+const morgan = require("morgan");
+
+const PORT = 3000;
 
 const app = express();
 
-app.use(logger("dev"));
+app.use(morgan("dev"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -24,7 +26,7 @@ app.get("/", (req, res) => {
   res.send(index.html);
 });
 
-//Listening on PORT 3000
-app.listen(3000, () => {
-    console.log("App running on port 3000!");
+//Listening on PORT...
+app.listen(PORT, () => {
+    console.log(`Server listening on ${PORT}!`);
   });
