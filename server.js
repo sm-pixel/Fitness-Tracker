@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const db = require("./models");
-// const { Workout } = require("./models");
+const path = require("path")
 
 const PORT = 3000;
 
@@ -27,6 +27,18 @@ app.get("/api/workouts", (req, res) => {
     })
 })
 
+//HTML Routes
+app.get("/exercise",(req,res)=>{
+  res.sendFile(path.join(__dirname,"public","exercise.html"));
+})
+
+app.get("/stats", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "stats.html"))
+})
+
+app.get("/", (req,res) => {
+  res.sendFile(paht.join(__dirname, "../public/index.html"))
+})
 
 //Listening on PORT...
 app.listen(PORT, () => {
