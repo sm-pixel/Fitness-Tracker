@@ -18,8 +18,15 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
 //GET workouts route
+app.get("/api/workouts", (req, res) => {
+  db.Workout.find({})
+    .then(Workout => {
+      res.json(Workout)
+    }).catch (err => {
+      res.json(err)
+    })
+})
 
-//GET exercise route
 
 //Listening on PORT...
 app.listen(PORT, () => {

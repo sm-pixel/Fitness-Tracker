@@ -6,7 +6,8 @@ const opts = { toJSON: { virtuals: true } };
 
 const workoutSchema = new Schema({
     day: {
-        type: Date
+        type: Date,
+        default: Date.now
     },
     exercies: [
         {
