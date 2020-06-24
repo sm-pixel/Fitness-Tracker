@@ -1,6 +1,8 @@
 const express = require("express");
-// const mongojs = require("mongojs");
 const morgan = require("morgan");
+const mongoose = require("mongoose");
+const db = require("./models");
+// const { Workout } = require("./models");
 
 const PORT = 3000;
 
@@ -8,23 +10,16 @@ const app = express();
 
 app.use(morgan("dev"));
 
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use(express.static("public"));
 
-// const databaseUrl = "";
-// const collections = [""];
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
-// const db = mongojs(databaseUrl, collections);
+//GET workouts route
 
-// db.on("error", error => {
-//   console.log("Database Error:", error);
-// });
-
-// app.get("/", (req, res) => {
-//   res.send(index.html);
-// });
+//GET exercise route
 
 //Listening on PORT...
 app.listen(PORT, () => {
