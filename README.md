@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/inquirer?style=flat-square)
 
-[Deployed](https://sm-pixel.github.io/Fitness-Tracker/)
+[Deployed](https://desolate-bastion-99331.herokuapp.com/)
 
 ## Description
 An application that allows you to view, create and track daily workouts
