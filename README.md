@@ -1,11 +1,16 @@
 # Fitness-Tracker
 
+![npm](https://img.shields.io/npm/v/inquirer?style=flat-square)
+
+[Deployed](https://sm-pixel.github.io/Fitness-Tracker/)
+
 ## Description
 An application that allows you to view, create and track daily workouts
 
 ## Demo
 
-gif and delpoyed link
+![Fitness Tracker](public/assets/fitnesstracker.png)
+![Weather Dashboard](public/assets/workoutDashboard.png)
 
 ## User Story
 
@@ -18,7 +23,7 @@ SO THAT I can keep track of my fitness
 ```
 
 ## Technologies Used
-
-
-## Author
-Samantha Morrison [link]
+Languages
+* HTML
+* CSS
+* Javascript
