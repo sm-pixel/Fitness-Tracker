@@ -26,16 +26,7 @@ app.get("/api/workouts", (req, res) => {
       res.json(err)
     })
 })
-//GET workouts/id
-app.get("/api/workouts/:id", (req, res) => {
-  db.Workout.findOne({ _id: req.params.id })
-    .then(dbWorkout => {
-      res.json(dbWorkout);
-    })
-    .catch(err => {
-      res.json(err);
-    });
-})
+
 //POST workouts
 app.post("/api/workouts", (req, res) => {
   db.Workout.create({})
